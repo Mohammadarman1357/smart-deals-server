@@ -17,10 +17,10 @@ admin.initializeApp({
 app.use(cors());
 app.use(express.json());
 
-const logger = (req, res, next) => {
-    console.log('logging info')
-    next();
-}
+// const logger = (req, res, next) => {
+//     console.log('logging info')
+//     next();
+// }
 
 const verifyFirebaseToken = async (req, res, next) => {
     
