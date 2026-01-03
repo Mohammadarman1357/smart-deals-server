@@ -166,17 +166,6 @@ async function run() {
             res.send(result);
         })
 
-        // app.get('/bids', async (req, res) => {
-
-        //     const query = {};
-        //     if (query.email) {
-        //         query.buyer_email = email;
-        //     }
-
-        //     const cursor = bidsCollection.find();
-        //     const result = await cursor.toArray();
-        //     res.send(result);
-        // })
 
         app.get('/products/bids/:productId', verifyFirebaseToken, async (req, res) => {
             const productId = req.params.productId;
